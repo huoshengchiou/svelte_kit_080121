@@ -19,6 +19,8 @@
   },
   "type": "module",
   "dependencies": {
+    "axios": "^0.21.1",
+    "rxjs": "^7.3.0",
     "yarn": "^1.22.11"
   }
 }
