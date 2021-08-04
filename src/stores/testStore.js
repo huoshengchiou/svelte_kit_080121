@@ -11,3 +11,5 @@ const getPoke = async (num) => {
 };
 
 getPoke(150);
+
+export const count = writable({ key: 1, value: '1234' });
