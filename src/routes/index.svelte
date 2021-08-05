@@ -29,11 +29,16 @@ export const load= async({ page,session,fetch,context })=> {
      // console.log($pokemons) //pull the data from store //$ react to the data (當值改變所有使用到跟著改)
 
      let typeIn=''
+     let typeIn2=''
      let list=[]
+     let singleVal=''
 $:{
      console.log({typeIn})    //根據值的callback
- 
-}
+     
+  }
+  $:singleVal=`${typeIn}`
+  //根據其他值連動產生的行為reactive statememt
+  
 onMount(async()=>{
   console.log('mount')
 
@@ -45,12 +50,15 @@ return ()=>  console.log('unmount')
 
 
 <Secret/>
+{singleVal}
 <h1>Welcome to SvelteKit</h1>
 <svelte:head>
      <title> Svelte Rxjs</title>
 </svelte:head>
 
 <input type="text" bind:value={typeIn}>
+<input type="text" bind:value={typeIn2}>
+
 
 {#each $pokemons.filter(pokeman=>pokeman.name.includes(typeIn)) as pokeman}
 <PokeCard pokeman={pokeman}/>
