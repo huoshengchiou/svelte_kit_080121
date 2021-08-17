@@ -1,5 +1,5 @@
 yarn.lock
-svelte-kit/
+svelte-kit
 # Logs
 logs
 *.log
